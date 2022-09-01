@@ -4,11 +4,12 @@ options:
   deploymentTarget:
     iOS: 14.0
   xcodeVersion: "13.1"
+  postGenCommand: pod install
 
 targets:
   XcodeGenSample:
     type: application
-    platform: [iOS]
+    platform: iOS
     sources: XcodeGenSample
     settings:
       base:
@@ -16,6 +17,7 @@ targets:
         CURRENT_PROJECT_VERSION: 1.0
         PRODUCT_BUNDLE_IDENTIFIER: tk.XcodeGenSample
         CODE_SIGN_IDENTITY: Automatic
+        DEVELOPMENT_TEAM: RJTYFV5RFU
     info:
       path: XcodeGenSample/info.plist
       properties:
