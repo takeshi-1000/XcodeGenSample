@@ -1,0 +1,24 @@
+name: XcodeGenSample
+
+options:
+  deploymentTarget:
+    iOS: 14.0
+  xcodeVersion: "13.1"
+
+targets:
+  XcodeGenSample:
+    type: application
+    platform: [iOS]
+    sources: XcodeGenSample
+    settings:
+      base:
+        MARKETING_VERSION: 1.0
+        CURRENT_PROJECT_VERSION: 1.0
+        PRODUCT_BUNDLE_IDENTIFIER: tk.XcodeGenSample
+        CODE_SIGN_IDENTITY: Automatic
+    info:
+      path: XcodeGenSample/info.plist
+      properties:
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        
